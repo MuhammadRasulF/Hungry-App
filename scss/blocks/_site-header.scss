@@ -1,0 +1,96 @@
+.site-header {
+    background-color: $bg-color;
+}
+
+.site-header__container {
+    padding-top: 35px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header__logo-link {
+    margin: 0;
+    margin-right: 30px;
+    padding: 0;
+    width: 138px;
+    text-decoration: none;
+    font-family: $font-lato;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30.95px;
+    line-height: 37px;
+    color: $font-color;
+}
+
+.site-header__nav {
+    margin: 0;
+    padding: 0;
+}
+
+.site-header__list {
+    @include list-unstyled ;
+    margin-right: 373px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.site-header__item {
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.site-header__link {
+    text-decoration: none;
+    font-family: $font-work;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $font-color;
+}
+
+.site-header__button {
+    display: none;
+    background-color: $bg-color;
+    border: none;
+}
+
+.site-header__button-img {
+    max-width: 20px;
+}
+
+
+@media only screen and (max-width: 1150px) {
+    .site-header__list {
+        margin-right: 10px;
+    }
+
+    .site-header__logo-link {
+        width: 100px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .site-header__container {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .site-header__nav {
+        display: none;
+    }
+
+    .site-header__button {
+        display: block;
+
+        &:active {
+            display: none;
+        }
+    }
+}

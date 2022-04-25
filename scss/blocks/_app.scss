@@ -1,0 +1,50 @@
+.app_container {
+    padding-top: 63px;
+    padding-bottom: 66px;
+}
+
+.app__desc {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 45px;
+    font-family: $font-lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21.4632px;
+    line-height: 26px;
+    color: $company-color;
+}
+
+.app__list {
+    @include list-unstyled;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__item {
+    &:not(:last-child) {
+        margin-right: 113px;
+    }
+}
+.app__link {
+    display: block;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .app__desc {
+        text-align: center;
+    }
+    
+    .app__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .app__item:not(:last-child) {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}    
